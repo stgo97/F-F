@@ -185,6 +185,7 @@ header:hover .head_inner a:last-child{
 .hero {
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
 .m_banner {
     width: 100%;
@@ -193,14 +194,16 @@ header:hover .head_inner a:last-child{
 }
 .banner_list {
     display: flex;
-    width: 300%;
+    margin: 0;
+    padding: 0;
     transition: transform 0.5s ease; 
 }
 
 .banner_list>li {
-    width: calc(100% / 3);
+    width: 100%;
     position: relative;
     flex-shrink: 0;
+    overflow: hidden;
 }
 .banner_list>li>a {
     display: block;
@@ -210,7 +213,7 @@ header:hover .head_inner a:last-child{
 
 .banner_list>li>a img {
     width: 100%;
-    height: 400px;
+    height: 250px;
     display: block;
     object-fit: cover;
 }
@@ -225,25 +228,8 @@ header:hover .head_inner a:last-child{
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     z-index: 2;
 }
-.m_banner .next_btn{
-    position: absolute;
-    bottom: 20px;
-    left: 50px;
-    cursor: pointer;
-    background-color: #Fff;
-    border-radius: 3px;
-    padding: 5px;
-    z-index: 10;
-}
-.m_banner .prev_btn{
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    cursor: pointer;
-    background-color: #Fff;
-    border-radius: 3px;
-    z-index: 10;
-    padding: 5px;
+.m_banner button{
+    display: none;
 }
 /* --------hero--------- */
 
@@ -338,6 +324,7 @@ header:hover .head_inner a:last-child{
     height: auto;
     
 }
+
 /* -----------fashion--------- */
 
 /* ---------beauty--------- */
@@ -426,6 +413,7 @@ header:hover .head_inner a:last-child{
 .b_card_txt {
     display: none;
 }
+
 /* ---------beauty-------- */
 
 /* --------retail--------- */
@@ -464,7 +452,7 @@ header:hover .head_inner a:last-child{
     position: relative;
     width: 100%;
     height: 240px;
-    border-radius: 12px;
+    border-radius: 15px;
     overflow: hidden;
 }
 .retail-bot img {
@@ -525,7 +513,6 @@ header:hover .head_inner a:last-child{
     position: relative;
 }
 
-/* 슬라이드 레일: JS가 가로 폭과 transform을 제어할 수 있게 설정 */
 .news_list {
     display: flex;
     position: relative;
@@ -535,14 +522,14 @@ header:hover .head_inner a:last-child{
     list-style: none;
 }
 
-.news_list > li {
+.news_list>li {
     flex-shrink: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
 }
 
-.news_list > li > img {
+.news_list>li>img {
     width: 100%;
     height: 220px;
     object-fit: cover;
@@ -550,14 +537,14 @@ header:hover .head_inner a:last-child{
     border-radius: 12px;
 }
 
-.news_list > li > div {
+.news_list>li>div {
     display: flex;
     flex-direction: column;
     flex: 1;
     padding-top: 20px;
 }
 
-.news_list > li h3 {
+.news_list>li h3 {
     font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 8px;
@@ -583,7 +570,7 @@ header:hover .head_inner a:last-child{
     cursor: pointer;
 }
 
-.news_list > li span img {
+.news_list>li span img {
     width: 10px;
 }
 .footer {
@@ -637,7 +624,7 @@ header:hover .head_inner a:last-child{
     object-fit: contain;
 }
 
-/* 브랜드 로고 */
+
 .footer-brands {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -849,7 +836,7 @@ header:hover .head_inner a:last-child{
     .banner_list>li>a p {
         left: 120px;
         bottom: 120px;
-        font-size: 3rem;
+        font-size: clamp(2rem, 2.5vw, 3rem) !important;
         font-weight: 700;
         line-height: 1.3;
     }
@@ -1599,7 +1586,7 @@ MOBILE : 767px 이하
     }
     .banner_list>li>a p{
         text-align: start;
-        font-size: clamp(1.4rem, 3vw, 3rem);
+        font-size: clamp(1.1rem, 3vw, 1.4rem);
     }
     .card_list .card_txt{
         font-size: clamp(1rem, 4vw, 2.5rem);

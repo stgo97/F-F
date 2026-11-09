@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MLB 공식 온라인 스토어</title>
+        <link rel="stylesheet" href="mlb.css">
+        <link rel="stylesheet" href="mlbcss.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="MLB.js"></script>
+
+    </head>
+    <body>
+        <aside class="top-banner">
+            <div class="top-banner-inner">
+                <a href="#" class="top-banner-link">
+                    <p>MLB KOREA OFFICIAL STORE · 100% 공식 정품 인증관</p>
+                    <img src="images/link.png" alt="바로가기">
+                </a>
+            </div>
+        </aside>
+        <header class="header">
+            <div class="header-inner">
+                <!-- 1. 좌측 로고 및 패밀리 브랜드 영역 -->
+                <div class="header-left">
+                    <h1 class="logo"><img src="images/LOGO.png" alt="MLB 로고"></h1>
+
+                    <!-- 호버 시 로고 아래에 노출되는 패밀리 브랜드 목록 -->
+                    <ul class="family-brands" aria-label="패밀리 브랜드 바로가기">
+                        <li><a href="index.html">F&F</a></li>
+                        <li><a href="duvetica.html">DUVETICA</a></li>
+                        <li><a href="spura.html">SUPRA</a></li>
+                    </ul>
+                </div>
+
+                <!-- 2. 중앙 GNB (1차 메뉴 + 드롭다운 2차 서브메뉴) -->
+                <nav class="gnb" id="main-gnb" aria-label="메인 카테고리">
+                    <ul class="gnb-list">
+                        <!-- WOMEN -->
+                        <li class="gnb-item">
+                            <a href="#" class="depth1">WOMEN</a>
+                            <ul class="depth2">
+                                <li><a href="#">아우터</a></li>
+                                <li><a href="#">상의</a></li>
+                                <li><a href="#">하의</a></li>
+                                <li><a href="#">ACC</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- MEN -->
+                        <li class="gnb-item">
+                            <a href="#" class="depth1">MEN</a>
+                            <ul class="depth2">
+                                <li><a href="#">아우터</a></li>
+                                <li><a href="#">상의</a></li>
+                                <li><a href="#">바지</a></li>
+                                <li><a href="#">치마</a></li>
+                                <li><a href="#">ACC</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- ACC -->
+                        <li class="gnb-item">
+                            <a href="#" class="depth1">ACC</a>
+                            <ul class="depth2">
+                                <li><a href="#">신발</a></li>
+                                <li><a href="#">모자</a></li>
+                                <li><a href="#">가방</a></li>
+                                <li><a href="#">양말</a></li>
+                                <li><a href="#">기타</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- INFLUENCER -->
+                        <li class="gnb-item">
+                            <a href="#" class="depth1">INFLUENCER</a>
+                            <ul class="depth2">
+                                <li><a href="#">연예인</a></li>
+                                <li><a href="#">SNS</a></li>
+                                <li><a href="#">MLB크루</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- VIP -->
+                        <li class="gnb-item">
+                            <a href="#" class="depth1">VIP</a>
+                            <ul class="depth2">
+                                <li><a href="#">혜택</a></li>
+                                <li><a href="#">한정 발매</a></li>
+                                <li><a href="#">엠버서더</a></li>
+                                <li><a href="#">등급 안내</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- 3. 우측 유틸리티 영역 (검색창 + 하트 + 장바구니 + MY) -->
+                <div class="header-utils">
+                    <!-- 검색창 -->
+                    <form class="search-form" role="search">
+                        <label for="site-search" class="blind">상품 또는 모델명 검색</label>
+                        <input 
+                            type="search" 
+                            id="site-search" 
+                            class="search-input" 
+                            placeholder="상품·모델명을 검색해 보세요." 
+                            autocomplete="off">
+                        <button type="submit" class="search-btn" aria-label="검색">
+                            <img src="images/Search_icon.png" alt="검색 아이콘">
+                        </button>
+                    </form>
+
+                    <!-- 사용자 유틸 링크 -->
+                    <ul class="util-menu">
+                        <li>
+                            <a href="#" aria-label="위시리스트">
+                                <img class="header-heart" src="images/bi_heart.png" alt="위시리스트 아이콘">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="장바구니">
+                                <img class="header-cart" src="images/bi_cart.png" alt="장바구니 아이콘">
+                            </a> 
+                        </li>
+                        <li class="util-divider" aria-hidden="true"></li>
+                        <li>
+                            <a href="#" class="util-my" aria-label="마이페이지"><span class="my-text">MY</span><svg class="my-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg></a>
+                        </li>
+                    </ul>
+                    <button type="button" class="mobile-menu-toggle" aria-label="전체 메뉴 열기" aria-expanded="false" aria-controls="main-gnb">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+            <!-- 태블릿 검색 패널 -->
+<div class="tablet-search-panel"    
+     id="tablet-search-panel"
+     aria-hidden="true">
+
+    <div class="tablet-search-content">
+
+        <!-- 왼쪽 패밀리 브랜드 -->
+        <ul class="tablet-search-brands">
+            <li><a href="#">F&F</a></li>
+            <li><a href="#">DUVETICA</a></li>
+            <li><a href="#">SUPRA</a></li>
+        </ul>
+
+        <!-- 오른쪽 인기 검색어 -->
+        <ol class="tablet-popular-list">
+            <li>
+                <span class="popular-rank">1</span>
+                <a href="#">여성 경량패딩</a>
+            </li>
+            <li>
+                <span class="popular-rank">2</span>
+                <a href="#">플러시 미야옹 비니 뉴욕양키스</a>
+            </li>
+            <li>
+                <span class="popular-rank">3</span>
+                <a href="#">버니 비니 LA다저스</a>
+            </li>
+            <li>
+                <span class="popular-rank">4</span>
+                <a href="#">여성 경량 후드 커브패딩 뉴욕양키</a>
+            </li>
+            <li>
+                <span class="popular-rank">5</span>
+                <a href="#">볼캡</a>
+            </li>
+        </ol>
+
+    </div>
+</div>
+        </header>
+        <!-- 모바일 전체 메뉴 -->
+<div class="mobile-drawer" id="mobile-drawer"
+     aria-hidden="true">
+
+    <div class="mobile-drawer-backdrop"></div>
+
+    <aside class="mobile-drawer-panel"
+           aria-label="모바일 전체 메뉴">
+
+        <div class="mobile-drawer-top">
+            <form class="mobile-drawer-search"
+                  role="search">
+                <input type="search"
+                       placeholder="상품·모델명을 검색해 보세요."
+                       aria-label="상품 검색">
+
+                <button type="submit" aria-label="검색">
+                    <img src="images/Search_icon.png" alt="">
+                </button>
+            </form>
+
+            <button type="button"
+                    class="mobile-drawer-close"
+                    aria-label="메뉴 닫기">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="mobile-drawer-nav" aria-label="모바일 카테고리">
+
+            <ul class="mobile-drawer-list">
+
+                <li class="mobile-drawer-item">
+                    <button type="button"
+                            class="mobile-drawer-category"
+                            aria-expanded="false">
+                        WOMEN
+                        <span class="drawer-arrow"></span>
+                    </button>
+                    <ul class="mobile-drawer-sub">
+                        <li><a href="#">아우터</a></li>
+                        <li><a href="#">상의</a></li>
+                        <li><a href="#">하의</a></li>
+                        <li><a href="#">ACC</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-drawer-item">
+                    <button type="button"
+                            class="mobile-drawer-category"
+                            aria-expanded="false">
+                        MEN
+                        <span class="drawer-arrow"></span>
+                    </button>
+                    <ul class="mobile-drawer-sub">
+                        <li><a href="#">아우터</a></li>
+                        <li><a href="#">상의</a></li>
+                        <li><a href="#">바지</a></li>
+                        <li><a href="#">치마</a></li>
+                        <li><a href="#">ACC</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-drawer-item">
+                    <button type="button"
+                            class="mobile-drawer-category"
+                            aria-expanded="false">
+                        ACC
+                        <span class="drawer-arrow"></span>
+                    </button>
+                    <ul class="mobile-drawer-sub">
+                        <li><a href="#">신발</a></li>
+                        <li><a href="#">모자</a></li>
+                        <li><a href="#">가방</a></li>
+                        <li><a href="#">양말</a></li>
+                        <li><a href="#">기타</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-drawer-item">
+                    <button type="button"
+                            class="mobile-drawer-category"
+                            aria-expanded="false">
+                        INFLUENCER
+                        <span class="drawer-arrow"></span>
+                    </button>
+                    <ul class="mobile-drawer-sub">
+                        <li><a href="#">연예인</a></li>
+                        <li><a href="#">SNS</a></li>
+                        <li><a href="#">MLB크루</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="mobile-drawer-footer">
+            <div class="mobile-drawer-brands">
+                <strong class="drawer-mlb"><a href="index.html">MLB</a></strong>
+                <strong><a href="duvetica.html">DUVETICA</a></strong>
+                <strong><a href="spura.html">SUPRA®</a></strong>
+            </div>
+            <p>Copyright © F&F Corp. All Rights Reserved.</p>
+        </div>
+
+    </aside>
+</div>
+        <main>
+            <!-- 히어로 비주얼 (메인 배너 섹션) -->
+            <!-- HERO VISUAL -->
+            <section class="hero-visual">
+
+                <!-- 히어로 슬라이드 이미지 -->
+                <div class="hero-bg">
+
+                    <div class="hero-slide active">
+                        <picture>
+                            <source
+                                media="(max-width: 767px)"
+                                srcset="images/hero01_mobile.png">
+
+                            <img
+                                src="images/hero01.png"
+                                alt="리센느 PICK">
+                        </picture>
+                    </div>
+                    <div class="hero-slide">
+                        <picture>
+                            <source
+                                media="(max-width: 767px)"
+                                srcset="images/hero02_mobile.png">
+
+                            <img
+                                src="images/hero02.png"
+                                alt="리센느 PICK">
+                        </picture>
+                    </div>
+
+                    <div class="hero-slide">
+                        <picture>
+                            <source
+                                media="(max-width: 767px)"
+                                srcset="images/hero03_mobile.png">
+
+                            <img
+                                src="images/hero03.png"
+                                alt="리센느 PICK">
+                        </picture>
+                    </div>
+                    <div class="hero-slide">
+                        <picture>
+                            <source
+                                media="(max-width: 767px)"
+                                srcset="images/hero04_mobile.png">
+
+                            <img
+                                src="images/hero04.png"
+                                alt="리센느 PICK">
+                        </picture>
+                    </div>
+
+
+
+                </div>
+
+                <!-- 좌측 메뉴 -->
+                <div class="hero-inner">
+
+                    <nav class="hero-indicator"
+                        aria-label="메인 추천 테마">
+
+                        <ul>
+                            <li class="active">
+                                <a href="#" aria-current="true">
+                                    리센느 PICK
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">MLB 신상</a>
+                            </li>
+
+                            <li>
+                                <a href="#">이벤트</a>
+                            </li>
+
+                            <li>
+                                <a href="#">VIP 혜택</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+            </section>
+            <!-- RESCENE PICK! 상품 추천 섹션 -->
+            <section class="rescene-pick">
+                <div class="inner">
+                    <!-- 섹션 타이틀 & 설명 -->
+                    <div class="section-title">
+                        <h2>| RESCENE PICK!</h2>
+                        <p>미야옹과 버니, 리센느의 방식으로 매치하는 두 가지 실루엣</p>
+                    </div>
+
+                    <!-- 카드 리스트 그리드 (4열) -->
+                    <ul class="pick-list">
+                        <!-- 1. 리브 -->
+                        <li class="pick-item">
+                            <div class="card-thumb card-pink">
+                                <button type="button" class="btn-like" aria-label="리브 픽 비니 찜하기">
+                                    <img src="images/Heart_icon1.png" alt="찜하기">
+                                </button>
+                                <!-- 기본 비니 이미지 -->
+                                <img src="images/RESCENE_Photocard_Liv.png" alt="리브 픽 핑크 캣 비니" class="img-default">
+                                <!-- 호버 시 노출될 착용 화보 이미지 -->
+                                <img src="images/photocard_LIV_Hover.png" alt="리브 착용 화보" class="img-hover">
+                            </div>
+                            <strong class="member-name">리브</strong>
+                        </li>
+
+                        <!-- 2. 미나미 -->
+                        <li class="pick-item">
+                            <div class="card-thumb card-blue">
+                                <button type="button" class="btn-like" aria-label="미나미 픽 비니 찜하기">
+                                    <img src="images/Heart_icon1.png" alt="찜하기">
+                                </button>
+                                <!-- 기본 비니 이미지 -->
+                                <img src="images/RESCENE_Photocard_MINAMI.png" alt="미나미 픽 블루 버니 비니" class="img-default">
+                                <!-- 호버 시 노출될 착용 화보 이미지 -->
+                                <img src="images/photocard_MINAMI_Hover.png" alt="미나미 착용 화보" class="img-hover">
+                            </div>
+                            <strong class="member-name">미나미</strong>
+                        </li>
+
+                        <!-- 3. 메이 -->
+                        <li class="pick-item">
+                            <div class="card-thumb card-beige">
+                                <button type="button" class="btn-like" aria-label="메이 픽 비니 찜하기">
+                                    <img src="images/Heart_icon1.png" alt="찜하기">
+                                </button>
+                                <!-- 기본 비니 이미지 -->
+                                <img src="images/RESCENE_Photocard_MEI.png" alt="메이 픽 브라운 캣 비니" class="img-default">
+                                <!-- 호버 시 노출될 착용 화보 이미지 -->
+                                <img src="images/photocard_MEI_Hover.png" alt="메이 착용 화보" class="img-hover">
+                            </div>
+                            <strong class="member-name">메이</strong>
+                        </li>
+
+                        <!-- 4. 제나 -->
+                        <li class="pick-item">
+                            <div class="card-thumb card-gray">
+                                <button type="button" class="btn-like" aria-label="제나 픽 비니 찜하기">
+                                    <img src="images/Heart_icon1.png" alt="찜하기">
+                                </button>
+                                <!-- 기본 비니 이미지 -->
+                                <img src="images/RESCENE_Photocard_JENA.png" alt="제나 픽 블랙 버니 비니" class="img-default">
+                                <!-- 호버 시 노출될 착용 화보 이미지 -->
+                                <img src="images/photocard_Jena_Hover.png" alt="제나 착용 화보" class="img-hover">
+                            </div>
+                            <strong class="member-name">제나</strong>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- NEW ARRIVAL 신상품 섹션 -->
+            <section class="new-arrival">
+                <div class="inner">
+
+                    <div class="section-title">
+                        <h2>| NEW ARRIVAL</h2>
+                        <p>따끈한 MLB 신상을 확인해 보세요.</p>
+                    </div>
+
+                    <ul class="arrival-accordion">
+
+                        <!-- 01 SHORT DOWN -->
+                        <li class="accordion-item active">
+                            <picture>
+                                <source media="(max-width: 1199px)"
+                                        srcset="images/new1-1.png">
+                                <img src="images/new1.png" alt="SHORT DOWN">
+                            </picture>
+                            <span class="arrival-category">
+                                SHORT DOWN
+                            </span>
+
+                            <div class="arrival-text">
+                                <span class="arrival-label">2026 FW COLLECTION</span>
+                                <h3>THE SHORT DOWN EDIT</h3>
+                                <p>겨울을 완성하는 새로운 실루엣</p>
+                                <a href="#" class="arrival-link">자세히 보기</a>
+                            </div>
+                        </li>
+
+                        <!-- 02 KIDS -->
+                        <li class="accordion-item">
+                            <picture>
+                                <source media="(max-width: 1199px)"
+                                        srcset="images/new2-1.png">
+                                <img src="images/new2.png" alt="KIDS">
+                            </picture>
+                            <span class="arrival-category">
+                                KIDS
+                            </span>
+
+                            <div class="arrival-text">
+                                <span class="arrival-label">NEW COLLECTION</span>
+                                <h3>MLB KIDS</h3>
+                                <p>아이들을 위한 특별한 스타일</p>
+                                <a href="#" class="arrival-link">자세히 보기</a>
+                            </div>
+                        </li>
+
+                        <!-- 03 HEADWEAR -->
+                        <li class="accordion-item">
+                            <picture>
+                                <source media="(max-width: 1199px)"
+                                        srcset="images/new3-1.png">
+                                <img src="images/new3.png" alt="HEADWEAR">
+                            </picture>
+                            <span class="arrival-category">
+                                HEADWEAR
+                            </span>
+
+                            <div class="arrival-text">
+                                <span class="arrival-label">NEW ARRIVAL</span>
+                                <h3>HEADWEAR</h3>
+                                <p>일상에 포인트를 더하는 헤드웨어</p>
+                                <a href="#" class="arrival-link">자세히 보기</a>
+                            </div>
+                        </li>
+
+                        <!-- 04 MANTOMAN -->
+                        <li class="accordion-item">
+                            <picture>
+                                <source media="(max-width: 1199px)"
+                                        srcset="images/new4-1.png">
+                                <img src="images/new4.png" alt="MANTOMAN">
+                            </picture>
+                            <span class="arrival-category">
+                                MANTOMAN
+                            </span>
+                            <div class="arrival-text">
+                                <span class="arrival-label">DAILY STYLE</span>
+                                <h3>MANTOMAN</h3>
+                                <p>편안함과 스타일을 동시에</p>
+                                <a href="#" class="arrival-link">자세히 보기</a>
+                            </div>
+                        </li>
+
+                        <!-- 05 SHOES -->
+                        <li class="accordion-item">
+                            <picture>
+                                <source media="(max-width: 1199px)"
+                                        srcset="images/new5-1.png">
+                                <img src="images/new5.png" alt="SHOES">
+                            </picture>
+                            <span class="arrival-category">
+                                SHOES
+                            </span>
+                            <div class="arrival-text">
+                                <span class="arrival-label">NEW COLLECTION</span>
+                                <h3>SHOES</h3>
+                                <p>새로운 시즌을 위한 새로운 선택</p>
+                                <a href="#" class="arrival-link">자세히 보기</a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <!-- 모바일 전용 배너 선택 -->
+                    <div class="arrival-mobile-nav"
+                        aria-label="신상품 배너 선택">
+
+                    <button type="button" class="active"
+                            aria-label="첫 번째 배너"
+                            aria-pressed="true">01</button>
+                    <button type="button"
+                            aria-label="두 번째 배너"
+                            aria-pressed="false">02</button>
+                    <button type="button"
+                            aria-label="세 번째 배너"
+                            aria-pressed="false">03</button>
+                    <button type="button"
+                            aria-label="네 번째 배너"
+                            aria-pressed="false">04</button>
+                    <button type="button"
+                            aria-label="다섯 번째 배너"
+                            aria-pressed="false">05</button>
+
+                    </div>
+
+                </div>
+            </section>
+            <div class="Advertisement-Banner">
+                <p>첫 멤버쉽 가입<br>최대 20% 할인</p>
+            </div>
+            <!-- INFLUENCER 인플루언서 착용 후기 그리드 섹션 -->
+            <section class="influencer">
+                <div class="inner">
+                    <!-- 섹션 타이틀 & 설명 -->
+                    <div class="section-title">
+                        <h2>| INFLUENCER</h2>
+                        <p>인플루언서가 보여주는 생생한 착용 후기</p>
+                    </div>
+
+                    <!-- 카테고리 필터 탭 -->
+                    <div class="filter-tab"
+                        role="tablist"
+                        aria-label="인플루언서 착용 상품 카테고리">
+
+                        <button type="button" class="tab-btn active"
+                                role="tab" data-tab="all"
+                                aria-selected="true">ALL</button>
+
+                        <button type="button" class="tab-btn"
+                                role="tab" data-tab="outerwear"
+                                aria-selected="false">Outerwear</button>
+
+                        <button type="button" class="tab-btn"
+                                role="tab" data-tab="tops"
+                                aria-selected="false">Tops</button>
+
+                        <button type="button" class="tab-btn"
+                                role="tab" data-tab="headwear"
+                                aria-selected="false">HeadWear</button>
+
+                        <button type="button" class="tab-btn"
+                                role="tab" data-tab="shoes"
+                                aria-selected="false">Shoes</button>
+
+                    </div>
+
+                    <!-- all 탭 -->
+                    <ul class="influencer-grid all active" data-content="all">
+                        <!-- 1행 1열 (호버 예시 적용) -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER1-1.png" alt="인플루언서 @haze.n.blue 착용 컷">
+                                <!-- 호버 시 나타나는 오버레이 영역 -->
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@haze.n.blue</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 1행 2열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER1-2.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@luv.miel</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 1행 3열 (배너) -->
+                        <li class="grid-item banner">
+                            <div class="tag-box">
+                                <span>#BEST</span>
+                            </div>
+                        </li>
+
+                        <!-- 1행 4열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER1-3.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@dear_lune_</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 2행 1열 (배너) -->
+                        <li class="grid-item banner">
+                            <div class="tag-box">
+                                <span>#NEW</span>
+                            </div>
+                        </li>
+
+                        <!-- 2행 2열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER1-4.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@s2.rosie99</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 2행 3열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER1-5.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@hazy.v</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 2행 4열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER1-6.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@by_luvie_01</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 3행 1열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER1-7.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@oatmood__</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 3행 2열 (배너) -->
+                        <li class="grid-item banner">
+                            <div class="tag-box">
+                                <span>#Limited</span>
+                            </div>
+                        </li>
+
+                        <!-- 3행 3열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER1-8.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@useoul.muse</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 3행 4열 (더보기) -->
+                        <li class="grid-item more">
+                            <a href="#" class="more-link" aria-label="인플루언서 착용 후기 더보기">
+                                <span class="more-text">MORE</span>
+                                <img class="More-Arrow" src="images/More_Arrow.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Outerwear 탭 -->
+                    <ul class="influencer-grid outerwear" data-content="outerwear">
+                        <!-- 1행 1열 (호버 예시 적용) -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER2-1.png" alt="인플루언서 @haze.n.blue 착용 컷">
+                                <!-- 호버 시 나타나는 오버레이 영역 -->
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@luvly.bunny</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 1행 2열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER2-2.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@peachy.07x</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        
+
+                        <!-- 1행 4열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER2-3.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@jellybby_02</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 1행 3열 (배너) -->
+                        <li class="grid-item banner">
+                            <div class="tag-box">
+                                <span>#Padding</span>
+                            </div>
+                        </li>
+
+                        
+
+                        <!-- 2행 2열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER2-4.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@cherry.on.top</span>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 2행 1열 (배너) -->
+                        <li class="grid-item banner">
+                            <div class="tag-box">
+                                <span>#Jacket</span>
+                            </div>
+                        </li>
+
+                        <!-- 2행 3열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER2-5.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@tiny.m00d</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 2행 4열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER2-6.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@yuyu.2</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 3행 2열 (배너) -->
+                        <li class="grid-item banner">
+                            <div class="tag-box">
+                                <span>#Cardigan</span>
+                            </div>
+                        </li>
+                        <!-- 3행 1열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER2-7.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@n0nni</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        
+
+                        <!-- 3행 3열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER2-8.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@ur_princess</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 3행 4열 (더보기) -->
+                        <li class="grid-item more">
+                            <a href="#" class="more-link" aria-label="인플루언서 착용 후기 더보기">
+                                <span class="more-text">MORE</span>
+                                <img class="More-Arrow" src="images/More_Arrow.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Tops 탭 -->
+                    <ul class="influencer-grid tops" data-content="tops">
+                        <!-- 1행 1열 (호버 예시 적용) -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER3-1.png" alt="인플루언서 @haze.n.blue 착용 컷">
+                                <!-- 호버 시 나타나는 오버레이 영역 -->
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@xevy</span>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 1행 3열 (배너) -->
+                        <li class="grid-item banner">
+                            <div class="tag-box">
+                                <span>#Sweatshirt</span>
+                            </div>
+                        </li>
+
+                        <!-- 1행 2열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER3-2.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@notyour.vy</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        
+
+                        <!-- 1행 4열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER3-3.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@xoxo.07vibe</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        
+
+                        <!-- 2행 2열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER3-4.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@xoxo.07vibe</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 2행 3열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER3-5.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@after_2am</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 2행 4열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER3-6.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@vintage.xx</span>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 2행 1열 (배너) -->
+                        <li class="grid-item banner">
+                            <div class="tag-box">
+                                <span>#Tee</span>
+                            </div>
+                        </li>
+
+                        <!-- 3행 2열 (배너) -->
+                        <li class="grid-item banner">
+                            <div class="tag-box">
+                                <span>#Hoodie</span>
+                            </div>
+                        </li>
+                        <!-- 3행 1열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER3-7.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@_archive</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        
+
+                        <!-- 3행 3열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER3-8.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@little.m0chi</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 3행 4열 (더보기) -->
+                        <li class="grid-item more">
+                            <a href="#" class="more-link" aria-label="인플루언서 착용 후기 더보기">
+                                <span class="more-text">MORE</span>
+                                <img class="More-Arrow" src="images/More_Arrow.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- HeadWear 탭 -->
+                    <ul class="influencer-grid headwear" data-content="headwear">
+                        <!-- 1행 1열 (호버 예시 적용) -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER4-1.png" alt="인플루언서 @haze.n.blue 착용 컷">
+                                <!-- 호버 시 나타나는 오버레이 영역 -->
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@haze.n.blue</span>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 1행 3열 (배너) -->
+                        <li class="grid-item banner">
+                            <div class="tag-box">
+                                <span>#Beanie</span>
+                            </div>
+                        </li>
+                        <!-- 1행 2열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER4-2.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@user_id</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        
+
+                        <!-- 1행 4열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER4-3.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@user_id</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 2행 1열 (배너) -->
+                        <li class="grid-item banner">
+                            <div class="tag-box">
+                                <span>#Cap</span>
+                            </div>
+                        </li>
+
+                        <!-- 2행 2열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER4-4.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@user_id</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 2행 3열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER4-5.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@user_id</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 2행 4열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER4-6.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@user_id</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 3행 1열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER4-7.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@user_id</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 3행 2열 (배너) -->
+                        <li class="grid-item banner">
+                            <div class="tag-box">
+                                <span>#SunVisor</span>
+                            </div>
+                        </li>
+
+                        <!-- 3행 3열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER4-8.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@user_id</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 3행 4열 (더보기) -->
+                        <li class="grid-item more">
+                            <a href="#" class="more-link" aria-label="인플루언서 착용 후기 더보기">
+                                <span class="more-text">MORE</span>
+                                <img class="More-Arrow" src="images/More_Arrow.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Shoes 탭 -->
+                    <ul class="influencer-grid shoes" data-content="shoes">
+                        <!-- 1행 1열 (호버 예시 적용) -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER5-1.png" alt="인플루언서 @haze.n.blue 착용 컷">
+                                <!-- 호버 시 나타나는 오버레이 영역 -->
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@haze.n.blue</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 1행 2열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER5-2.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@user_id</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 1행 3열 (배너) -->
+                        <li class="grid-item banner">
+                            <div class="tag-box">
+                                <span>#Sneakers</span>
+                            </div>
+                        </li>
+
+                        <!-- 1행 4열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER5-3.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@user_id</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 2행 1열 (배너) -->
+                        <li class="grid-item banner">
+                            <div class="tag-box">
+                                <span>#Running</span>
+                            </div>
+                        </li>
+
+                        <!-- 2행 2열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER5-4.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@user_id</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 2행 3열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER5-5.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@user_id</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 2행 4열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER5-6.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@user_id</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 3행 1열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER5-7.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@user_id</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 3행 2열 (배너) -->
+                        <li class="grid-item banner">
+                            <div class="tag-box">
+                                <span>#Boots</span>
+                            </div>
+                        </li>
+
+                        <!-- 3행 3열 -->
+                        <li class="grid-item photo">
+                            <a href="#" class="photo-link">
+                                <img src="images/INFLUENCER/INFLUENCER5-8.png" alt="인플루언서 착용 컷">
+                                <div class="hover-overlay">
+                                    <button type="button" class="btn-like" aria-label="찜하기">
+                                        <img src="images/Heart_icon1.png" alt="찜하기">
+                                    </button>
+                                    <span class="user-id">@user_id</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- 3행 4열 (더보기) -->
+                        <li class="grid-item more">
+                            <a href="#" class="more-link" aria-label="인플루언서 착용 후기 더보기">
+                                <span class="more-text">MORE</span>
+                                <img class="More-Arrow" src="images/More_Arrow.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="history">
+                <div class="inner">
+
+                    <div class="section-title">
+                        <h2>| HISTORY</h2>
+                    </div>
+
+                    <!-- 찜한 제품 -->
+                    <div class="history-group">
+                        <h3 class="group-title">찜한 제품</h3>
+
+                        <ul class="product-list">
+
+                            <li class="product-item">
+                                <div class="product-thumb">
+
+                                    <a href="#">
+                                    <img
+                                        src="images/Product_image1.png"
+                                        alt="커브 에어 웜 에센셜 후드 숏패딩 LA다저스"
+                                    >
+                                    </a>
+
+                                    <div class="thumb-utils">
+                                    <button type="button" class="btn-wish"
+                                        aria-label="찜하기">
+                                        <img
+                                        src="images/card_btn_favorited3.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-share"
+                                        aria-label="공유하기">
+                                        <img
+                                        src="images/akar-iconspaper-airplane1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-review"
+                                        aria-label="리뷰 보기">
+                                        <img
+                                        src="images/card_btn_Review1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+                                    </div>
+                                </div>
+
+                                <div class="product-info">
+                                    <span class="category-tag">PARKA</span>
+
+                                    <strong class="product-name">
+                                    <a href="#">
+                                        커브 에어 웜 에센셜 후드 숏패딩 LA다저스
+                                    </a>
+                                    </strong>
+
+                                    <div class="price-wrap">
+                                    <span class="price">329,000원</span>
+
+                                    <ul class="color-chips" aria-label="색상 옵션">
+                                        <li class="chip-Navy"></li>
+                                        <li class="chip-Brown"></li>
+                                        <li class="chip-Gray"></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-item">
+                                <div class="product-thumb">
+
+                                    <a href="#">
+                                    <img
+                                        src="images/Product_image2.png"
+                                        alt="커브 에어 웜 에센셜 후드 숏패딩 LA다저스"
+                                    >
+                                    </a>
+
+                                    <div class="thumb-utils">
+                                    <button type="button" class="btn-wish"
+                                        aria-label="찜하기">
+                                        <img
+                                        src="images/card_btn_favorited3.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-share"
+                                        aria-label="공유하기">
+                                        <img
+                                        src="images/akar-iconspaper-airplane1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-review"
+                                        aria-label="리뷰 보기">
+                                        <img
+                                        src="images/card_btn_Review1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+                                    </div>
+                                </div>
+
+                                <div class="product-info">
+                                    <span class="category-tag">CAP</span>
+
+                                    <strong class="product-name">
+                                    <a href="#">
+                                        플러시 미야옹 비니 뉴욕양키스
+                                    </a>
+                                    </strong>
+
+                                    <div class="price-wrap">
+                                    <span class="price">59,900원</span>
+
+                                    <ul class="color-chips" aria-label="색상 옵션">
+                                        <li class="chip-Pink"></li>
+                                        <li class="chip-Brown"></li>
+                                        <li class="chip-Black"></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-item">
+                                <div class="product-thumb">
+
+                                    <a href="#">
+                                    <img
+                                        src="images/Product_image3.png"
+                                        alt="커브 에어 웜 에센셜 후드 숏패딩 LA다저스"
+                                    >
+                                    </a>
+
+                                    <div class="thumb-utils">
+                                    <button type="button" class="btn-wish"
+                                        aria-label="찜하기">
+                                        <img
+                                        src="images/card_btn_favorited3.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-share"
+                                        aria-label="공유하기">
+                                        <img
+                                        src="images/akar-iconspaper-airplane1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-review"
+                                        aria-label="리뷰 보기">
+                                        <img
+                                        src="images/card_btn_Review1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+                                    </div>
+                                </div>
+
+                                <div class="product-info">
+                                    <span class="category-tag">SNEAKERS</span>
+
+                                    <strong class="product-name">
+                                    <a href="#">
+                                        트랙러너 LA다저스
+                                    </a>
+                                    </strong>
+
+                                    <div class="price-wrap">
+                                    <span class="price">139,900원</span>
+
+                                    <ul class="color-chips" aria-label="색상 옵션">
+                                        <li class="chip-Black"></li>
+                                        <li class="chip-Navy"></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-item">
+                                <div class="product-thumb">
+
+                                    <a href="#">
+                                    <img
+                                        src="images/Product_image4.png"
+                                        alt="커브 에어 웜 에센셜 후드 숏패딩 LA다저스"
+                                    >
+                                    </a>
+
+                                    <div class="thumb-utils">
+                                    <button type="button" class="btn-wish"
+                                        aria-label="찜하기">
+                                        <img
+                                        src="images/card_btn_favorited3.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-share"
+                                        aria-label="공유하기">
+                                        <img
+                                        src="images/akar-iconspaper-airplane1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-review"
+                                        aria-label="리뷰 보기">
+                                        <img
+                                        src="images/card_btn_Review1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+                                    </div>
+                                </div>
+
+                                <div class="product-info">
+                                    <span class="category-tag">PARKA</span>
+
+                                    <strong class="product-name">
+                                    <a href="#">
+                                        베이직 스몰로고 맨투맨 LA다저스
+                                    </a>
+                                    </strong>
+
+                                    <div class="price-wrap">
+                                    <span class="price">35,100원</span>
+
+                                    <ul class="color-chips" aria-label="색상 옵션">
+                                        <li class="chip-Pink"></li>
+                                        <li class="chip-skyblue"></li>
+                                        <li class="chip-Black"></li>
+                                        <li class="chip-White"></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-item">
+                                <div class="product-thumb">
+
+                                    <a href="#">
+                                    <img
+                                        src="images/Product_image5.png"
+                                        alt="커브 에어 웜 에센셜 후드 숏패딩 LA다저스"
+                                    >
+                                    </a>
+
+                                    <div class="thumb-utils">
+                                    <button type="button" class="btn-wish"
+                                        aria-label="찜하기">
+                                        <img
+                                        src="images/card_btn_favorited3.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-share"
+                                        aria-label="공유하기">
+                                        <img
+                                        src="images/akar-iconspaper-airplane1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-review"
+                                        aria-label="리뷰 보기">
+                                        <img
+                                        src="images/card_btn_Review1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+                                    </div>
+                                </div>
+
+                                <div class="product-info">
+                                    <span class="category-tag">PARKA</span>
+
+                                    <strong class="product-name">
+                                    <a href="#">
+                                        여성 경량 후드 커브패딩 LA다저스
+                                    </a>
+                                    </strong>
+
+                                    <div class="price-wrap">
+                                    <span class="price">228,000원</span>
+
+                                    <ul class="color-chips" aria-label="색상 옵션">
+                                        <li class="chip-Pink"></li>
+                                        <li class="chip-Black"></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-item">
+                                <div class="product-thumb">
+
+                                    <a href="#">
+                                    <img
+                                        src="images/Product_image6.png"
+                                        alt="커브 에어 웜 에센셜 후드 숏패딩 LA다저스"
+                                    >
+                                    </a>
+
+                                    <div class="thumb-utils">
+                                    <button type="button" class="btn-wish"
+                                        aria-label="찜하기">
+                                        <img
+                                        src="images/card_btn_favorited3.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-share"
+                                        aria-label="공유하기">
+                                        <img
+                                        src="images/akar-iconspaper-airplane1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-review"
+                                        aria-label="리뷰 보기">
+                                        <img
+                                        src="images/card_btn_Review1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+                                    </div>
+                                </div>
+
+                                <div class="product-info">
+                                    <span class="category-tag">JACKET</span>
+
+                                    <strong class="product-name">
+                                    <a href="#">
+                                        시그니처 울 바시티자켓 뉴욕양키스
+                                    </a>
+                                    </strong>
+
+                                    <div class="price-wrap">
+                                    <span class="price">158,200원</span>
+
+                                    <ul class="color-chips" aria-label="색상 옵션">
+                                        <li class="chip-Black"></li>
+                                        <li class="chip-White"></li>
+                                        <li class="chip-red"></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- 기존 나머지 상품 5개 유지 -->
+
+                        </ul>
+                    </div>
+
+                    <!-- 최근 본 제품 -->
+                    <div class="history-group">
+                        <h3 class="group-title">최근 본 제품</h3>
+
+                        <ul class="product-list">
+                            <li class="product-item">
+                                <div class="product-thumb">
+
+                                    <a href="#">
+                                    <img
+                                        src="images/Product_image7.png"
+                                        alt="커브 에어 웜 에센셜 후드 숏패딩 LA다저스"
+                                    >
+                                    </a>
+
+                                    <div class="thumb-utils">
+                                    <button type="button" class="btn-wish"
+                                        aria-label="찜하기">
+                                        <img
+                                        src="images/card_btn_favorited1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-share"
+                                        aria-label="공유하기">
+                                        <img
+                                        src="images/akar-iconspaper-airplane1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-review"
+                                        aria-label="리뷰 보기">
+                                        <img
+                                        src="images/card_btn_Review1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+                                    </div>
+                                </div>
+
+                                <div class="product-info">
+                                    <span class="category-tag">PANTS</span>
+
+                                    <strong class="product-name">
+                                    <a href="#">
+                                        여성 베이직 스몰로고 더블웨이스트 세미와이드 팬츠 LA다저스
+                                    </a>
+                                    </strong>
+
+                                    <div class="price-wrap">
+                                    <span class="price">129,000원</span>
+
+                                    <ul class="color-chips" aria-label="색상 옵션">
+                                        <li class="chip-Black"></li>
+                                        <li class="chip-skyblue"></li>
+                                        <li class="chip-Pink"></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-item">
+                                <div class="product-thumb">
+
+                                    <a href="#">
+                                    <img
+                                        src="images/Product_image8.png"
+                                        alt="커브 에어 웜 에센셜 후드 숏패딩 LA다저스"
+                                    >
+                                    </a>
+
+                                    <div class="thumb-utils">
+                                    <button type="button" class="btn-wish"
+                                        aria-label="찜하기">
+                                        <img
+                                        src="images/card_btn_favorited1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-share"
+                                        aria-label="공유하기">
+                                        <img
+                                        src="images/akar-iconspaper-airplane1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-review"
+                                        aria-label="리뷰 보기">
+                                        <img
+                                        src="images/card_btn_Review1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+                                    </div>
+                                </div>
+
+                                <div class="product-info">
+                                    <span class="category-tag">PARKA</span>
+
+                                    <strong class="product-name">
+                                    <a href="#">
+                                        여성 경량 후드 커브패딩 뉴욕양키스
+                                    </a>
+                                    </strong>
+
+                                    <div class="price-wrap">
+                                    <span class="price">199,000원</span>
+
+                                    <ul class="color-chips" aria-label="색상 옵션">
+                                        <li class="chip-Black"></li>
+                                        <li class="chip-Navy"></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-item">
+                                <div class="product-thumb">
+
+                                    <a href="#">
+                                    <img
+                                        src="images/Product_image9.png"
+                                        alt="커브 에어 웜 에센셜 후드 숏패딩 LA다저스"
+                                    >
+                                    </a>
+
+                                    <div class="thumb-utils">
+                                    <button type="button" class="btn-wish"
+                                        aria-label="찜하기">
+                                        <img
+                                        src="images/card_btn_favorited1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-share"
+                                        aria-label="공유하기">
+                                        <img
+                                        src="images/akar-iconspaper-airplane1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-review"
+                                        aria-label="리뷰 보기">
+                                        <img
+                                        src="images/card_btn_Review1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+                                    </div>
+                                </div>
+
+                                <div class="product-info">
+                                    <span class="category-tag">PARKA</span>
+
+                                    <strong class="product-name">
+                                    <a href="#">
+                                        여성 경량 후드 커브패딩 LA다저스
+                                    </a>
+                                    </strong>
+
+                                    <div class="price-wrap">
+                                    <span class="price">199,000원</span>
+
+                                    <ul class="color-chips" aria-label="색상 옵션">
+                                        <li class="chip-White"></li>
+                                        <li class="chip-Gray"></li>
+                                        <li class="chip-Black"></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-item">
+                                <div class="product-thumb">
+
+                                    <a href="#">
+                                    <img
+                                        src="images/Product_image1.png"
+                                        alt="커브 에어 웜 에센셜 후드 숏패딩 LA다저스"
+                                    >
+                                    </a>
+
+                                    <div class="thumb-utils">
+                                    <button type="button" class="btn-wish"
+                                        aria-label="찜하기">
+                                        <img
+                                        src="images/card_btn_favorited1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-share"
+                                        aria-label="공유하기">
+                                        <img
+                                        src="images/akar-iconspaper-airplane1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-review"
+                                        aria-label="리뷰 보기">
+                                        <img
+                                        src="images/card_btn_Review1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+                                    </div>
+                                </div>
+
+                                <div class="product-info">
+                                    <span class="category-tag">PARKA</span>
+
+                                    <strong class="product-name">
+                                    <a href="#">
+                                        커브 에어 웜 에센셜 후드 숏패딩 LA다저스
+                                    </a>
+                                    </strong>
+
+                                    <div class="price-wrap">
+                                    <span class="price">329,000원</span>
+
+                                    <ul class="color-chips" aria-label="색상 옵션">
+                                        <li class="chip-Navy"></li>
+                                        <li class="chip-Brown"></li>
+                                        <li class="chip-Gray"></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-item">
+                                <div class="product-thumb">
+
+                                    <a href="#">
+                                    <img
+                                        src="images/Product_image11.png"
+                                        alt="커브 에어 웜 에센셜 후드 숏패딩 LA다저스"
+                                    >
+                                    </a>
+
+                                    <div class="thumb-utils">
+                                    <button type="button" class="btn-wish"
+                                        aria-label="찜하기">
+                                        <img
+                                        src="images/card_btn_favorited1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-share"
+                                        aria-label="공유하기">
+                                        <img
+                                        src="images/akar-iconspaper-airplane1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-review"
+                                        aria-label="리뷰 보기">
+                                        <img
+                                        src="images/card_btn_Review1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+                                    </div>
+                                </div>
+
+                                <div class="product-info">
+                                    <span class="category-tag">TEE</span>
+
+                                    <strong class="product-name">
+                                    <a href="#">
+                                        스포티브 스몰 그래픽 세미 오버핏 나그랑 긴팔 티셔츠 뉴욕양키스
+                                    </a>
+                                    </strong>
+
+                                    <div class="price-wrap">
+                                    <span class="price">39,900원</span>
+
+                                    <ul class="color-chips" aria-label="색상 옵션">
+                                        <li class="chip-red"></li>
+                                        <li class="chip-skyblue"></li>
+                                        <li class="chip-Black"></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-item">
+                                <div class="product-thumb">
+
+                                    <a href="#">
+                                    <img
+                                        src="images/Product_image12.png"
+                                        alt="커브 에어 웜 에센셜 후드 숏패딩 LA다저스"
+                                    >
+                                    </a>
+
+                                    <div class="thumb-utils">
+                                    <button type="button" class="btn-wish"
+                                        aria-label="찜하기">
+                                        <img
+                                        src="images/card_btn_favorited1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-share"
+                                        aria-label="공유하기">
+                                        <img
+                                        src="images/akar-iconspaper-airplane1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+
+                                    <button type="button" class="btn-review"
+                                        aria-label="리뷰 보기">
+                                        <img
+                                        src="images/card_btn_Review1.svg"
+                                        alt=""
+                                        >
+                                    </button>
+                                    </div>
+                                </div>
+
+                                <div class="product-info">
+                                    <span class="category-tag">PARKA</span>
+
+                                    <strong class="product-name">
+                                    <a href="#">
+                                        여성 커브 에어 쉘 후드 구스 크롭패딩 LA다저스
+                                    </a>
+                                    </strong>
+
+                                    <div class="price-wrap">
+                                    <span class="price">320,900원</span>
+
+                                    <ul class="color-chips" aria-label="색상 옵션">
+                                        <li class="chip-skyblue"></li>
+                                        <li class="chip-Black"></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 기존 최근 본 상품 6개 유지 -->
+                        </ul>
+                    </div>
+
+                </div>
+            </section>        
+        </main>
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <div class="footer-main">
+                <div class="footer-inner">
+
+                    <!-- SNS -->
+                    <div class="footer-social">
+                        <p>F&F Official Social Media</p>
+
+                        <ul class="social-list">
+                            <li>
+                                <a href="#" aria-label="Instagram">
+                                    <img src="images/sns_logo_instagram.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Facebook">
+                                    <img src="images/sns_logo_facebook.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="YouTube">
+                                    <img src="images/sns_logo_youtube.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="X">
+                                    <img src="images/sns_logo_Twitter.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="X">
+                                    <img src="images/sns_logo_x.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 브랜드 로고 -->
+                    <div class="footer-brands">
+                        <a href="#" class="footer-brand">
+                            <img src="images/footer_duvetica.png"
+                                alt="DUVETICA">
+                        </a>
+
+                        <a href="#" class="footer-brand">
+                            <img src="images/footer_mlb.png"
+                                alt="MLB">
+                        </a>
+
+                        <a href="#" class="footer-brand">
+                            <img src="images/footer_supra.png"
+                                alt="SUPRA">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        <!-- 기업 정보 -->
+            <div class="footer-bottom">
+                <div class="footer-inner footer-bottom-inner">
+
+                    <div class="footer-company">
+                        <nav class="footer-links" aria-label="회사 안내">
+                            <a href="#">회사소개</a>
+                            <a href="#">고객센터</a>
+                            <a href="#">이용약관</a>
+                            <a href="#">개인정보처리방침</a>
+                            <a href="#">채용</a>
+                        </nav>
+
+                        <div class="company-details">
+                            <p>(주)에프엔에프 사업자 정보</p>
+                            <p>대표: 김창수 / 서울특별시 강남구 테헤란로8길 8</p>
+                            <p>사업자 등록번호: 153-81-02451 | 사업자정보 확인 | 통신판매업 신고번호 : 제2021-서울강남-03353호 | 개인정보보호 책임자 : 류영석</p>
+                            <p>교환・반품 반송처 : 경기도 이천시 대월면 초지리 57 F&F 물류센터 엠엘비코리아 물류부</p>
+                            <p>고객센터 : 080-807-0012 / 운영시간 : 평일 오전 9시 ~ 오후 6시(토/일/공휴일 휴무)</p>
+                        </div>
+                    </div>
+
+                    <div class="footer-copyright">
+                        <strong class="footer-fnf">F&F</strong>
+                        <small>Copyright © F&F Corp. All Rights Reserved.</small>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
