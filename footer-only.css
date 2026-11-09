@@ -1,0 +1,268 @@
+/* =========================================
+   FOOTER - PC
+========================================= */
+
+.footer {
+    width: 100%;
+    background: #111;
+    color: #fff;
+}
+
+.footer-inner {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 120px;
+}
+
+/* SNS + 브랜드 영역 */
+.footer-main {
+    background: #111;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 65px 0 35px;
+}
+
+.footer-social p {
+    font-size: 14px;
+    color: #aaa;
+    letter-spacing: 0.3px;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-list img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+/* 브랜드 로고 */
+.footer-brands {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    gap: 40px;
+    padding: 70px 0 85px;
+    border-top: 1px solid #777;
+}
+
+.footer-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+.footer-brand img {
+    display: block;
+    width: 100%;
+    max-width: 542px;
+    max-height: 133px;
+    object-fit: contain;
+}
+
+/* 하단 기업 정보 */
+.footer-bottom {
+    background: #080808;
+}
+
+.footer-bottom-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    padding-top: 40px;
+    padding-bottom: 45px;
+}
+
+.footer-company {
+    flex: 1;
+    min-width: 0;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 0;
+    margin-bottom: 28px;
+}
+
+.footer-links a {
+    color: #ddd;
+    font-size: 13px;
+    padding: 0 12px;
+    border-right: 1px solid #555;
+}
+
+.footer-links a:first-child {
+    padding-left: 0;
+}
+
+.footer-links a:last-child {
+    border-right: none;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.company-details {
+    color: #999;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.footer-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+    flex-shrink: 0;
+}
+
+.footer-fnf {
+    font-size: 58px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 1;
+}
+
+.footer-copyright small {
+    color: #999;
+    font-size: 11px;
+}
+
+/* =========================================
+TABLET : 768px ~ 1199px
+========================================= */
+
+@media (max-width: 1199px) {
+
+    .footer-inner {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .footer-brands {
+        gap: 30px;
+        padding: 55px 0 65px;
+    }
+
+    .footer-brand img {
+        max-width: 220px;
+        max-height: 70px;
+    }
+
+    .footer-bottom-inner {
+        gap: 25px;
+    }
+
+    .footer-fnf {
+        font-size: 48px;
+    }
+}
+
+/* =========================================
+MOBILE : 767px 이하
+========================================= */
+
+@media (max-width: 767px) {
+
+    .footer-inner {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* SNS */
+    .footer-social {
+        padding: 45px 0 30px;
+        gap: 14px;
+    }
+
+    .footer-social p {
+        font-size: 12px;
+    }
+
+    .social-list {
+        gap: 10px;
+    }
+
+    .social-list a {
+        width: 34px;
+        height: 34px;
+    }
+
+    .social-list img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* 브랜드 로고 3열 유지 */
+    .footer-brands {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        padding: 40px 0 50px;
+    }
+
+    .footer-brand img {
+        width: 100%;
+        max-height: 45px;
+    }
+
+    /* 하단 기업 정보 세로 정렬 */
+    .footer-bottom-inner {
+        flex-direction: column;
+        gap: 35px;
+        padding-top: 30px;
+        padding-bottom: 35px;
+    }
+
+    .footer-links {
+        gap: 10px 0;
+        margin-bottom: 22px;
+    }
+
+    .footer-links a {
+        font-size: 11px;
+        padding: 0 8px;
+    }
+
+    .company-details {
+        font-size: 10px;
+        line-height: 1.7;
+    }
+
+    .footer-copyright {
+        width: 100%;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .footer-fnf {
+        font-size: 40px;
+    }
+
+    .footer-copyright small {
+        font-size: 10px;
+    }
+}
+
+/* =============================================
