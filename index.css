@@ -20,8 +20,8 @@ header:hover .head_inner a:last-child{
     max-width: 1680px;
     height: 65px;
     display: flex;
-    margin: 0 auto; /* 가운데 정렬 */
-    padding: 0 20px; /* 모바일/작은 화면에서는 20px만 줘서 양 끝으로 시원하게 벌려주기! */
+    margin: 0 auto; 
+    padding: 0 20px; 
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
@@ -497,7 +497,7 @@ header:hover .head_inner a:last-child{
     width: 100%;
     padding: 50px 16px;
     background-color: #F8F7F4;
-    overflow: hidden; /* 슬라이드가 화면 밖으로 넘치지 않게 방지 */
+    overflow: hidden;
 }
 
 .brand_news h2 {
@@ -586,7 +586,6 @@ header:hover .head_inner a:last-child{
     padding: 0 120px;
 }
 
-/* SNS + 브랜드 영역 */
 .footer-main {
     background: #111;
 }
@@ -649,7 +648,7 @@ header:hover .head_inner a:last-child{
     object-fit: contain;
 }
 
-/* 하단 기업 정보 */
+
 .footer-bottom {
     background: #080808;
 }
