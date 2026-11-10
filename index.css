@@ -707,6 +707,9 @@ header:hover .head_inner a:last-child{
     gap: 30px;
     flex-shrink: 0;
 }
+.footer-copyright a{
+    color: #fff;
+}
 
 .footer-fnf {
     font-size: 58px;
